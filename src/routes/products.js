@@ -58,3 +58,12 @@ router.delete('/:pid', (req, res) => {
 
 loadProducts();
 export default router
+}router.post('/', (req, res) => {
+    // ...existing code...
+    io.emit('product update', products);
+  });
+  
+  router.delete('/:pid', (req, res) => {
+    // ...existing code...
+    io.emit('product update', products);
+  });
